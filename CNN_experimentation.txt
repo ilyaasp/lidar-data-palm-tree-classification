@@ -1,0 +1,70 @@
+Percobaan DEM, DSM, Intensity:
+1. Percobaan 1
+epochs: 20
+accuracy: 0.785
+val_accuracy: 0.7186
+evaluation_accuracy: 0.6938
+bacth_size: 32
+NN dg 2 unit Dense layers (4096 neurons each)
+lr=0.001
+Data tabular
+2. Percobaan 2
+epochs: 100
+accuracy: 0.8613
+val_accuracy: 0.7338
+evaluation_accuracy: 0.7318
+bacth_size: 32
+NN dg 3 unit Dense layers (128, 256 dan 512 neurons each)
+lr=0.001
+Data tabular 
+3. Percobaan 3
+epochs: 100
+accuracy: 1.00
+val_accuracy: 0.8853
+evaluation_accuracy: 0.8546
+bacth_size: 32
+CNN dg 2 lapis Conv (16 dan 32) layer, 2 lapis MaxPooling, 2 unit hidden layers (64 dan 128 neurons each) 
+lr=0.001
+Data array 3D dims, lebih seperti image. Sehingga diproses dg CNN 
+4. Percobaan 4
+epochs: 100
+accuracy: 0.55
+val_accuracy: 0.55
+evaluation_accuracy: 0.55
+Penurunan signifikan terjadi di epoch ke 97
+bacth_size: 32
+CNN dg 2 lapis Conv (16 dan 32) layer, 2 lapis MaxPooling, 2 unit hidden layers (64 dan 64 neurons each) 
+lr=0.01
+Data array 3D dims, lebih seperti image. Sehingga diproses dg CNN 
+5. Percobaan 5
+epochs: 50
+accuracy: 0.9967
+val_accuracy: 0.8745
+evaluation_accuracy: 0.8356
+bacth_size: 32
+CNN dg 2 lapis Conv (16 dan 32) layer, 2 lapis MaxPooling, 2 unit hidden layers (64 dan 128 neurons each) 
+lr=0.001
+Data array 3D dims, lebih seperti image. Sehingga diproses dg CNN 
+waktu = 420 detik
+6. Percobaan 6
+epochs: 50
+accuracy: 0.9973
+val_accuracy: 0.8701
+evaluation_accuracy: 0.8235 
+bacth_size: 32
+CNN dg 2 lapis Conv Conv (16 16 dan 32 32) layer, 2 lapis MaxPooling, 2 unit hidden layers (64 dan 128 neurons each) / VGG like model 
+lr=0.001
+Data array 3D dims, lebih seperti image. Sehingga diproses dg CNN 
+waktu = 1223 detik
+Dropout=0.1
+7. Percobaan 7 (Menggunakan keras-tuner) # ValueError: rate must be a scalar tensor or a float in the range [0, 1), got 1
+Start: 9.17 malam
+The optimal number of units in the first Conv2D layer is 432 , activation relu and padding same. 
+Second Conv2D layer best unit is 304, activation relu. The optimal learning rate for the optimizer
+is 0.0001. And the best Dropout is 0.7000000000000001
+
+The optimal number of units in the first dense layer is 16 , activation relu.
+Second dense layer units is 16 , activation relu
+
+Sawit: 586 + 789 = 1375 
+Bukan Sawit: 1210 + 381 = 1591 
